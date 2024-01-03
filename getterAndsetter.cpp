@@ -7,7 +7,7 @@ class Hero
 {
 
 private:
-   string superPower;
+    string superPower;
 
 public:
     // Properties
@@ -15,22 +15,25 @@ public:
     char name[100];
     char level;
 
-  // getter
-    string getSuperPower(){
+    // getter
+    string getSuperPower()
+    {
         return superPower;
     }
 
-    int getHealth(){
+    int getHealth()
+    {
         return health;
     }
 
-    void setHealth(int h){
+    void setHealth(int h)
+    {
         health = h;
     }
 
-
-  // setter
-    void setSuperPower(string power){
+    // setter
+    void setSuperPower(string power)
+    {
         superPower = power;
     }
 };
@@ -44,12 +47,11 @@ int main()
     obj.setSuperPower("Fire");
     cout << "Super Power of Hero is " << obj.getSuperPower() << endl;
 
-
     obj.setHealth(10);
     cout << "Obj Health is " << obj.getHealth() << endl;
 
     // Let's see how the access the class properties or data member
-    
+
     // cout << "Name of obj is " << obj.name << endl;
     // cout << "Health of obj is " << obj.health << endl;
 }
