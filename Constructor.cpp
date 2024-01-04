@@ -6,22 +6,63 @@ class Hero
 {
 public:
     // Properties
-    int power;
+    int superPower;
     char name[100];
-    char level;
+    char health;
+
+     // getter
+    int getSuperPower()
+    {
+        return superPower;
+    }
+
+    int getHealth()
+    {
+        return health;
+    }
+
+    void setHealth(int h)
+    {
+        health = h;
+    }
+
+    // Constructor
+    Hero()
+    {
+        cout << "Constructor Called" << endl;
+    }
+
+    // Parameterized Constructor
+    Hero(int health)
+    {
+        this->health = health;
+        cout << "Address of this Keyword " << this << endl;
+        //This Keyword Store the Address pf Current Object
+    }
 };
 
 int main()
 {
 
-    // Created object of Hero Type
-    Hero obj;
+    cout << "Before Object Creation" << endl;
+    // Created object of Hero Type statically
+    // Hero *obj2 = new Hero;
+    Hero obj(4);
+    cout << "Address of obj " << &obj << endl;
+    // Constructor Automatically called at the time of object creation
 
-    cout << sizeof(obj) << endl; // 108
-    // Print the size that is taken by its Properties
+    cout << "After Object Creation" << endl;
 
-    // Let's see how the access the class properties or data member
+     obj.setHealth(10);
 
-    cout << "Name of obj is " << obj.name << endl;
-    cout << "Power of obj is " << obj.power << endl;
+
+    //Copy Constructor
+    Hero ram(obj);
+    cout << "Ram health is" << ram.getHealth() << endl;
+    cout << "Ram health is " << obj.getHealth() << endl;
+    
 }
+
+//When you create your own Constructor default Constructor will Automatically die
+
+
