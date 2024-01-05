@@ -57,9 +57,9 @@ int main()
 
 
     //Copy Constructor
-    Hero ram(obj);
+    Hero ram(obj); // Ram can copy all the Properties ot obj
     cout << "Ram health is" << ram.getHealth() << endl;
-    cout << "Ram health is " << obj.getHealth() << endl;
+    cout << "Obj health is " << obj.getHealth() << endl;
     
 }
 
