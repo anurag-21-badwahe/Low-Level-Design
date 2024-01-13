@@ -27,9 +27,19 @@ class childClass : public parentClass{
 
 };
 
+class childClass2 : protected parentClass{
+    public:
+    string name;
+
+    int getHeight(){
+        return this->height;
+    }
+};
+
 int main(){
 
     childClass Anu;
+    childClass2 Rahul;
     parentClass Santosh;
     Anu.setWeight(80);
     Anu.setGender("Male");
@@ -38,6 +48,13 @@ int main(){
     cout << "Anu Color is" << Anu.color << endl;
     cout << "Santosh Gender is " << Santosh.getGender() << endl;
 
+
+    cout << "Name of Rahul is" << Rahul.name << endl;
+    // cout << "height of Rahul is" << Rahul.height<< endl; // It can get the height because access modifier is private
+    cout << "height of Rahul is" << Rahul.getHeight() << endl; 
+
 }
 
 ///Must see Modes of Inheritance Table
+
+// Also study types of Inheritance
